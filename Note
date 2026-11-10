@@ -1,0 +1,41 @@
+# Create Blank application:
+    npx create-expo-app@latest UserManagementApp --template blank-typescript
+
+# Install the following dependencies
+    npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+
+# react-native-screens - Native screen management: 
+    Improves screen navigation performance by using native screen components.
+
+# react-native-safe-area-context - Safe screen areas:	
+    Prevents content from overlapping the status bar, notch, or device navigation area.
+
+# react-native-gesture-handler - Touch gestures: 
+    Supports gestures such as swiping, dragging, and drawer opening.
+
+# react-native-reanimated - Animations: 
+    Provides smooth animations and interactions, including animated transitions.
+
+
+Then install the following navigation types
+# npm install @react-navigation/native 
+    Core navigation functionality: NavigationContainer
+# npm install @react-navigation/bottom-tabs 	
+    Bottom tab navigation: Home, Users, Settings
+# npm install @react-navigation/native-stack
+    Stack navigation: Users → Details → New User
+# npm install @react-navigation/drawer
+    Drawer navigation: Dashboard, Profile, Settings
+    
+    
+    
+# Open your root package.json.
+Find: "main": "expo-router/entry"
+Change it to: "main": "expo/AppEntry" - This tells Expo to start from App.tsx instead of Expo Router.
+
+# Check app.json
+If you have this configuration: Remove the expo-router plugin entry because we are not using Expo Router in this project.
+
+    "plugins": [
+    "expo-router"
+    ]
